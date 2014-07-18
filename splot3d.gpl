@@ -1,0 +1,21 @@
+# splot3d.gpl
+
+# Called by mkvideo.sh
+
+#set term pngcairo size 1024, 1024
+set term pngcairo size 1080, 1080
+set output imagedir.'/'.framename.'.png'
+set xrange [-20:20]
+set yrange [-20:20]
+set zrange [-20:20]
+#set cbrange [-0.4:1.8]
+
+set title sprintf("%s @ t=%03d",title,t)
+set key off
+
+rot_z=(t*360/100-1)%360+1
+rot_x=rot_z<=180?60:120
+print sprintf("rot_x=%f, rot_z=%f",rot_x,rot_z)
+set view rot_x,rot_z
+
+splot framename.'.bin' binary format='%4float' using 1:2:3:4 with points palette

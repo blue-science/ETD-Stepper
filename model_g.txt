@@ -1,0 +1,17 @@
+# T: Duration
+200
+# 1/dt: Number of computational steps per unit time. Should be a power of 2.
+256
+# fput: Frames per unit time. Must be an integer.
+1
+# L[]: Sizes. List 1 value for each dimension.
+50 50 50
+# L/dx: Number of computational cells along each dimension
+256 256 256
+# System constants
+a=14 b=29 dx=1 dy=12 p=1 q=1 g=0.1 s=0 u=0 w=0 
+
+# real  2521m8.138s
+# user 8436m37.976s
+# sys    40m50.942s
+

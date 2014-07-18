@@ -1,0 +1,22 @@
+# splot2d.gpl
+
+# Called by mkvideo.sh
+
+#set term pngcairo size 1024, 1024
+set term pngcairo size 1080, 1080
+set output imagedir.'/'.framename.'.png'
+set xrange [-20:20]
+set yrange [-20:20]
+set cbrange [-0.4:1.8]
+
+set style data lines
+set hidden3d
+set title sprintf("%s @ t=%03d",title,t)
+set ticslevel 0
+set key off
+
+set view map
+
+set pm3d
+
+splot framename.'.bin' binary using 2:1:3;
