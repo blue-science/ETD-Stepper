@@ -1,7 +1,7 @@
 # ETD Stepper
 
 ETD Stepper, short for Exponential Time Difference Stepper, is a general
-C++ code base for modeling the evolution of reaction-diffusion system
+C++ code base for modeling the evolution of reaction-diffusion systems
 with multiple reactants in 1, 2, and 3 dimensions of space.
 
 ## Requirements
